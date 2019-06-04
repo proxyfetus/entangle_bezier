@@ -1,0 +1,42 @@
+class Dot {
+  float x1 = 50;
+  float x2 = 100;
+  float x3 = 120;
+  float x4 = 70;
+  float y1 = 50;
+  float y2 = 300;
+  float y3 = 200;
+  float y4 = 300;
+  float xspeed = 1;
+  float yspeed = 1.5;
+  
+  
+  
+  void display(){
+    bezier(x1,y1,x2,y2,x3,y3,x4,y4);
+  }
+  
+  void move() {
+    x1 = x1 + random(-10,10);
+    x2 = x2 + random(-0.5,1);
+    x3 = x3 + random(-1,1);
+    x4 = x4 - random(-1,1);
+    y1 = y1 + random(-10,10);
+    y2 = y2 + random(-1,1);
+    y3 = y3 + random(-1,1);
+    y4 = y4 - random(-2,2);
+    }
+  
+  void bounce() {
+    if (x1 < 0 || x1 > 400 || x3 < 0 || x3 > 400) {
+    x1 = - x1;
+    }
+    
+   if (y1 < 0 || y1 > 400 || y3 < 0 || y3 > 400) {
+    y1 = - y1;
+    }
+    
+  }
+  
+  
+}
