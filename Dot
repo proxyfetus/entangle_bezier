@@ -1,0 +1,19 @@
+Dot a;
+
+
+void setup() {
+  size(400,400);
+  
+  a = new Dot();
+}
+
+void draw() {
+  background(70,215,110);
+  noFill();
+  strokeWeight(18);
+  a.display();
+  a.bounce();
+  a.move();
+  
+  
+}
