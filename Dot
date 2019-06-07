@@ -1,19 +1,22 @@
-Dot a;
-
-
+float i = 20;
+ 
 void setup() {
   size(400,400);
-  
-  a = new Dot();
+ 
 }
-
+  
 void draw() {
-  background(70,215,110);
   noFill();
   strokeWeight(18);
-  a.display();
-  a.bounce();
-  a.move();
+  background(179);
+  if (i < 80) {
+    i = i + 1;
+  } else if ( i < 150) {
+    i = i*0.9 + random(-1,1);
+  } else { 
+    i = i * 0.5 + random (-10,10);
+  }
   
-  
+  bezier(i,2*i,400-i,i/2,400-i,400-2*i,i*1.5,i);
+  println(i);
 }
